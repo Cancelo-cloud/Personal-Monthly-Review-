@@ -127,85 +127,156 @@
           text-align: center;
           border: 2px solid #e9ecef;
       } 
-     .muscle-group-grid {
+      .muscle-group-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
          gap: 10px; 
          margin-top: 15px
       } 
-     .muscle-group-item label {
-        font-size: 12px; 
-        margin-bottom: 3px; 
+      .muscle-group-item label {
+         font-size: 12px; 
+         margin-bottom: 3px; 
       } 
-     .muscle-group-item input {
-        padding: 5px;
-        font-size: 12px; 
-     } 
-     .training-hours grid {
-        display: grid;
-        grid-template-columns; repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-        margin-top: 15px; 
-     } 
-     .training-item {
-        background: #e8f5e8;
-        padding: 12px;
-        border-radius: 8px;
-        text-align: center;
-        border: 2px solid #c8e6c9;
-     } 
-     .training-item label {
-        font-size: 13px; 
-        margin-bottom: 5px;
-        color: #2e7d32;
-     } 
-     .training-iterm input {
-        padding: 8px;
-        font-size: 14px;
-        border: 2px solid #c8e6c9;
-     } 
-     .financial-card {
-        border-left-color: #27ae60;
-     }
-     .exercise.card {
-        border-left-color: #e74c3c;
-     } 
-     .goals.card {
-        border-left-color: #f39c12;
-     } 
-     .blog.card {
-        border-left-color: #9b59b6;
-     }
-     .purchase.card {
-        border-left-color: #e67e22;
-     } 
-     .actions-panel {
-        grid-column: 1 / -1;
-        text-align: center;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 15px; 
-     }
-     .bullet.textarea {
-        front-family: monospace;
-        line-height: 1.6; 
-     } 
+      .muscle-group-item input {
+         padding: 5px;
+         font-size: 12px; 
+      } 
+      .training-hours grid {
+         display: grid;
+         grid-template-columns; repeat(auto-fit, minmax(160px, 1fr));
+         gap: 15px;
+         margin-top: 15px; 
+      } 
+      .training-item {
+         background: #e8f5e8;
+         padding: 12px;
+         border-radius: 8px;
+         text-align: center;
+         border: 2px solid #c8e6c9;
+      } 
+      .training-item label {
+         font-size: 13px; 
+         margin-bottom: 5px;
+         color: #2e7d32;
+      } 
+      .training-iterm input {
+         padding: 8px;
+         font-size: 14px;
+         border: 2px solid #c8e6c9;
+      } 
+      .financial-card {
+         border-left-color: #27ae60;
+      }
+      .exercise.card {
+         border-left-color: #e74c3c;
+      } 
+      .goals.card {
+         border-left-color: #f39c12;
+      } 
+      .blog.card {
+         border-left-color: #9b59b6;
+      }
+      .purchase.card {
+         border-left-color: #e67e22;
+      } 
+      .actions-panel {
+         grid-column: 1 / -1;
+         text-align: center;
+         padding: 20px;
+         background: #f8f9fa;
+         border-radius: 15px; 
+      }
+      .bullet.textarea {
+         front-family: monospace;
+         line-height: 1.6; 
+      } 
 
-     @media (max-width: 768px) {
-        .dashboard {
-            grid.template-columns: 1fr;
-        } 
-     .container {
-        padding: 15px; 
-     } 
-     .header h1 {
-        font-size: 2em;
-     }
-   }
- >/style>
+      @media (max-width: 768px) {
+         .dashboard {
+             grid.template-columns: 1fr;
+         } 
+      .container {
+         padding: 15px; 
+      } 
+      .header h1 {
+         font-size: 2em;
+      }
+    }
+  >/style>
 </head>
 <body> 
- 
+    <div class="container">
+        <div class="header"> 
+            <h1> Monthly Review</h1? 
+            <p> Keeping Track of your efforts</p>
+            <div class="month-selector">
+                <label id:"month">
+                    <option value="July 2025"> selected>July 2025</option>
+                    <option value="August 2025">August 2025</option>
+                    <option value="September 2025">September 2025</option> 
+                    <option value="October 2025">October 2025</option> 
+                    <option value="November 2025">November 2025</option>
+                    <option value=December 2025">December 2025</option> 
+                </select> 
+            </div>
+        </div> 
+
+        <div class="dashboard">
+        <!-- Financial Assets & Liabilities --> 
+        <div class="card financial-card">
+            <h3> Financial Position</h3>
+            <div class="input-group'>
+                <label>Job Income (Monthly):</label> 
+                <input type:"number" id="Income" placeholder="Enter amount in Zar"> 
+            </div> 
+            <div class="input-group">
+                <label>Total Investments Made this Month:</label> 
+                <input type="number" id="stockValue" placeholder="Enter amount in Zar">
+            </div> 
+            <div class="input-group"> 
+                <label>Total Savings Made this Month:</label>
+                <input type="number" id="savings" placeholder="bank savings"> 
+            </div> 
+        <div class="input-group"> 
+                <label>Outstanding Debts:</label> 
+                <input type="number" id="debts" placeholder="Total debts"> 
+            </div> 
+        </div> 
+
+        <!-- Exercise & Energy --> 
+        <div class="card exercise-card">
+            <h3> Exercise & Energy</h3> 
+            <div class="exercise grid">
+                <div class="exercise-items">
+                    <label>Running (km):</label> 
+                    <input type="number" id="running" placeholder="0" step="0.1"> 
+                </div> 
+                <div class="exercise-item">
+                    <label>Cycling (km):</label>
+                    <input type="number" id="cycling" placeholder="0" step="0.1">
+                </div>
+            </div> 
+
+            <h4 style="margin-top: 20px; margin-bottom: 10px; color: #555;">Strength Training (Session)</hv>
+            <div class="muscle-group-grid">
+                <div class="muscle-group-grid"> 
+                    <label>Legs:</label> 
+                    <input type="number" id="legs" placeholder="0">
+            </div> 
+            <div class="muscle-group-item">
+                <label>Arms:</label> 
+                <input type="number" id="arms" placeholder="0">
+            </div> 
+            <div class="muscle-group-item">
+                <label>Chest:</label> 
+                <input type="number" id="chest" placeholder="0">
+            </div> 
+            <div class="muscle-group-item"> 
+                <label>Shoulders:</label>
+                <input type="number" id="shoulders" placeholder="0"> 
+            </div>
+        </div> 
+        
 
 
 

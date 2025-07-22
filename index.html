@@ -263,19 +263,91 @@
                     <label>Legs:</label> 
                     <input type="number" id="legs" placeholder="0">
             </div> 
-            <div class="muscle-group-item">
-                <label>Arms:</label> 
-                <input type="number" id="arms" placeholder="0">
-            </div> 
-            <div class="muscle-group-item">
-                <label>Chest:</label> 
-                <input type="number" id="chest" placeholder="0">
-            </div> 
-            <div class="muscle-group-item"> 
-                <label>Shoulders:</label>
-                <input type="number" id="shoulders" placeholder="0"> 
+                <div class="muscle-group-item">
+                    <label>Arms:</label> 
+                    <input type="number" id="arms" placeholder="0">
+                </div> 
+                <div class="muscle-group-item">
+                    <label>Chest:</label> 
+                    <input type="number" id="chest" placeholder="0">
+                </div> 
+                <div class="muscle-group-item"> 
+                    <label>Shoulders:</label>
+                    <input type="number" id="shoulders" placeholder="0"> 
+                </div>
+                <div class="muscle-group-item">
+                    <lavel>Back:</label>
+                    <input type="number" id="back" placeholder="0">
+                </div>
+            </div>
+
+            <div class="input-group" style="margin-top: 20px;">
+                <label>Energy Level Towards Exercising (1-10):</lavel>
+                <input type="number" id="energyLevel" min="1" max="10" placeholder="Rate 1-10">
             </div>
         </div> 
+
+        <1-- Goals & Projects -->
+        <div class="card goals-card">
+            <h3> Goals & Projects</h3> 
+            <div class="input-group">
+                <label>Monthly Wins:</label>
+                <textarea id="wins" rows="4" class="bullet-textarea" placeholder="• First big win
+        • Second big win"></textarea>
+            </div>
+            <div class="input-group">
+                <label>Clockify Reading Hours:</label>
+                <input type="number" id="readingHours" placeholder="Total reading hours">
+            </div>
+        </div>
+
+        <!-- Books -->
+        <div class="card books-card">
+            <h3>Books</h3>
+            <div class="input-group">
+                <label>Books I began reading:</label>
+                <textarea id="Book I began reading" rows="3" class="bullet-textarea" placeholder="• Book title
+        • Book title"></textarea>
+            </div>
+        </div> 
+    
+        <!-- Monthly Summary -->
+        <div class="card summary-card">
+            <h3> Monthly Summary</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                    <h4>Networth</h4>
+                    <div class="value" id="netWorth">R 0</div>
+                </div>
+                <div class="summary-item">
+                    <h4>Total Distance</h4>
+                    <div class="value" id="totalDistance">0km</div>
+                </div>
+                <div class="summary-item">
+                    <h4>Strength Sessions</h4>
+                    <div class="value" id="totalStrength">0</div>
+                </div>
+                <div class="summary-item">
+                    <h4>Energy Score</h4>
+                    <div class="value" id="energyScore">0/10</div>
+                </div>
+                <div class="summary-item">
+                    <h4>Books Read</h4>
+                    <div class="value" id="BooksCount">0</div>
+                </div>
+            </div> 
+        </div> 
+
+        <!-- Action Buttons -->
+        >div class="actions-panel">
+            <button class="btn" onclock="calculateSummary()">Calculate Summary</button>
+            <button class="btn btn-success" onclick="exportData()">Export to Excel Format</button>
+            <button class="btn" onclick="ShowExprtData(generateCSV())">Show Export Data</button>
+            <button class="btn" onclick="ClearData()">Clear all Data</button>
+        </div>
+    >/div>
+
+    <script>
         
 
 
